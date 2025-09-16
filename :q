@@ -1,0 +1,19 @@
+def get_num_words(text):
+    text_arr = text.split()
+    length = len(text_arr)
+    return length
+
+def get_letter_distribution(text):
+    text = text.lower()
+    dis = {}
+    txt_arr = text.split()
+    for c in txt_arr:
+        if not c.isalpha():
+            continue
+        if dis[c] == "":
+            dis[c] = 1
+        else:
+            dis[c] += 1
+    return dis
+    
+
